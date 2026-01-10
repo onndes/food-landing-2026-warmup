@@ -1,0 +1,13 @@
+@use './variables' as v;
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: v.$radius;
+  background: linear-gradient(45deg, v.$accent-blue, v.$accent-purple);
+  color: #fff;
+}
+
+.btn-secondary {
+  color: v.$accent-blue;
+}

@@ -1,0 +1,17 @@
+/* base styles */
+@use 'normalize.css';
+@use './variables';
+@use './typography';
+@use './base';
+
+/* utilities */
+@use './animations';
+@use './buttons';
+
+/* pages */
+@use './pages/home.scss';
+@use './pages/about.scss';
+
+/* blocks */
+@use './blocks/header.scss';
+@use './blocks/footer.scss';
