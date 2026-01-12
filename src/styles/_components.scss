@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.divider {
+  height: 2px;
+  background-color: v.$divider-color;
+  margin: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  &__image {
+    height: 42px;
+    width: auto;
+  }
+
+  &__text {
+    color: v.$accent;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: v.$letter-spacing;
+  }
+}
