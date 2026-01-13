@@ -1,13 +1,17 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 15px;
+  @include m.respond-min(1024px) {
+    padding: 0 20px;
+  }
 }
 
 .divider {
-  height: 2px;
+  height: 1px;
   background-color: v.$divider-color;
   margin: 0 20px;
 }

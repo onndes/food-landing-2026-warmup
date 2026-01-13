@@ -1,12 +1,12 @@
 /* base styles */
 @use 'normalize.css';
 @use './variables';
+@use './mixins';
 @use './typography';
 @use './base';
 
 /* utilities */
-@use './animations';
-@use './buttons';
+@use './components';
 
 /* pages */
 @use './pages/home.scss';

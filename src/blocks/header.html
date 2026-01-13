@@ -1,10 +1,48 @@
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="logo">VITE</a>
+<header class="header">
+  <div class="header__container container">
+    <a href="/" class="logo">
+      <img
+        src="../assets/images/logo.svg"
+        alt="Site Logo"
+        class="logo__image"
+      />
+      <span class="logo__text">eatly</span>
+    </a>
 
-    <nav class="nav">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/about/" class="nav-link">About</a>
-    </nav>
+    <div class="header__container-actions">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="/" class="header__nav-link">Menu</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="/" class="header__nav-link">Blog</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="/" class="header__nav-link">Pricing</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="/" class="header__nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="header__action-button header__action-button--login">
+          Log In
+        </button>
+        <button class="header__action-button header__action-button--signup">
+          Sign Up
+        </button>
+      </div>
+    </div>
+    <button class="header__burger" aria-label="Open menu">
+      <span class="header__burger-lines">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </span>
+    </button>
   </div>
+  <div class="divider"></div>
 </header>
