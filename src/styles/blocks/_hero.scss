@@ -106,7 +106,7 @@
       color: #fff;
       background-color: v.$accent;
     }
-    --secondary {
+    &--secondary {
       color: v.$accent;
       border: 1px solid v.$accent;
     }
@@ -144,18 +144,39 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 5%;
+    margin: 17%;
     @include m.respond-min(v.$bp-tablet) {
-      margin: 14%;
+      margin: 17%;
     }
   }
   &__plate-wrap {
     width: 100%;
     aspect-ratio: 1;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 20%;
+      height: 40%;
+      bottom: 53%;
+      right: -11%;
+      transform: scaleX(-1) rotate(324deg);
+      background: url('../../assets/images/decor/mobile-app-arrow.svg') center
+        center / contain no-repeat;
+      z-index: 2;
+
+      @include m.respond-min(v.$bp-tablet-portrait) {
+        bottom: 53%;
+        right: -11%;
+        transform: scaleX(-1) rotate(333deg);
+      }
+    }
   }
   &__plate-ring {
     position: absolute;
-    border: 24px solid v.$accent;
+    border: 40px solid v.$accent;
     border-radius: 50%;
     z-index: 0;
     width: 98%;
@@ -165,7 +186,7 @@
   }
   &__image-plate {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     height: auto;
     margin: 0 auto;
@@ -177,28 +198,34 @@
     position: absolute;
     border-radius: 8px;
     height: 17%;
-    max-height: 90px;
-    width: 65%;
-    max-width: 257px;
+    max-height: 95px;
+    width: 75%;
+    // max-width: 60%;
+    // min-width: 157px;
     background: #fff;
-    z-index: 1;
-    top: -11%;
+    z-index: 3;
+    top: -13%;
     left: 46%;
     display: flex;
     gap: 9px;
     padding: 7px 4px;
     box-shadow: -5px 6px 10px 0 rgba(0, 0, 0, 0.15);
     container-type: inline-size;
+
+    // @include m.respond-max(408px) {
+    //   max-width: 50;
+    // }
     @include m.respond-min(612px) {
-      top: -9%;
+      // top: -11%;
     }
     @include m.respond-min(v.$bp-tablet-portrait) {
-      top: -7%;
+      top: -10.5%;
       padding: 8px 7px;
-      max-width: 350px;
+      // max-width: 60%;
+      width: 70%;
     }
     @include m.respond-min(v.$bp-tablet) {
-      top: -11%;
+      top: -11.5%;
     }
     &::before {
       content: '';
@@ -252,7 +279,7 @@
 
   &__graphic {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     background-color: white;
     width: 37%;
     height: 37%;
