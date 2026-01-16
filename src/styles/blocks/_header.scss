@@ -16,6 +16,20 @@
     padding-top: 37px;
     padding-bottom: 23px;
     gap: 10px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 96%;
+      height: v.$divider-width;
+      bottom: -4px;
+      left: 2%;
+      background-color: v.$divider-color;
+      @include m.respond-min(997px) {
+        bottom: 4px;
+      }
+    }
   }
   &__container-actions {
     position: absolute;
