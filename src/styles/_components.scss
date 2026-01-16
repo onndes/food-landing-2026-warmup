@@ -42,3 +42,42 @@
     letter-spacing: v.$letter-spacing;
   }
 }
+
+.title {
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 120%;
+  color: v.$title-color;
+  margin: 0;
+  text-align: center;
+  max-width: 540px;
+  @include m.respond-min(v.$bp-tablet) {
+    max-width: none;
+    font-size: 75px;
+    text-align: start;
+  }
+  span {
+    color: v.$accent;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  @include m.respond-min(768px) {
+    padding: 18px 30px;
+  }
+  &--primary {
+    color: #fff;
+    background-color: v.$accent;
+  }
+  --secondary {
+    color: v.$accent;
+    border: 1px solid v.$accent;
+  }
+}

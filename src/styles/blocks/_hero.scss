@@ -102,16 +102,14 @@
     @include m.respond-min(768px) {
       padding: 18px 30px;
     }
-  }
-
-  &__button--primary {
-    color: #fff;
-    background-color: v.$accent;
-  }
-
-  &__button--secondary {
-    color: v.$accent;
-    border: 1px solid v.$accent;
+    &--primary {
+      color: #fff;
+      background-color: v.$accent;
+    }
+    --secondary {
+      color: v.$accent;
+      border: 1px solid v.$accent;
+    }
   }
 
   &__trastpilot {

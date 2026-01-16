@@ -1,0 +1,134 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.mobile-app {
+  &__container {
+    padding-top: 67px;
+    padding-bottom: 67px;
+    display: grid;
+    grid-template-columns: 1;
+    justify-content: center;
+    @include m.respond-min(v.$bp-tablet-portrait) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    @include m.respond-min(v.$bp-tablet-portrait) {
+      order: 1;
+      align-items: start;
+      justify-content: center;
+      padding-bottom: 30px;
+      padding-left: 50px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 37px;
+    max-width: 350px;
+    @include m.respond-min(v.$bp-tablet-portrait) {
+      font-size: 36px;
+    }
+  }
+
+  &__info-list {
+    max-width: 350px;
+    padding: 0px 15px 35px 26px;
+    text-align: justify;
+    line-height: 110%;
+    @include m.respond-min(v.$bp-tablet-portrait) {
+      text-align: start;
+      padding: 0px 15px 35px 15px;
+    }
+  }
+
+  &__info-item {
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 11px;
+    color: v.$text-main-light;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      top: 7px;
+      left: -11px;
+      background-color: v.$text-main-light;
+      border-radius: 100%;
+    }
+  }
+
+  &__button-wrap {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 56px;
+      height: 101px;
+      bottom: -82px;
+      left: -46px;
+      background: url('../../assets/images/decor/mobile-app-arrow.svg') center
+        center / contain no-repeat;
+      @include m.respond-min(v.$bp-tablet-portrait) {
+        transform: rotate(-110deg);
+        left: 163px;
+        bottom: -58px;
+      }
+    }
+  }
+
+  &__button {
+  }
+
+  &__img-wrap {
+    display: block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include m.respond-min(v.$bp-tablet-portrait) {
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: -6%;
+      right: 19%;
+      transform: rotate(195deg);
+      background: url('../../assets/images/decor/hero-lines-bottom-l.svg')
+        center center / contain no-repeat;
+      @include m.respond-min(v.$bp-tablet-portrait) {
+        top: -5%;
+        right: 6%;
+      }
+      @include m.respond-min(v.$bp-tablet) {
+        top: -5%;
+        right: 4%;
+      }
+      @include m.respond-min(v.$bp-desktop) {
+        top: -5%;
+        right: 4%;
+      }
+    }
+  }
+  &__img {
+    width: 170px;
+    height: auto;
+
+    @include m.respond-min(v.$bp-tablet-portrait) {
+      width: 216px;
+    }
+  }
+}
