@@ -11,6 +11,7 @@
   "devDependencies": {
     "posthtml": "^0.16.7",
     "posthtml-include": "^2.0.1",
+    "prettier": "3.8.0",
     "sass-embedded": "^1.97.2",
     "vite": "^7.2.4"
   },
