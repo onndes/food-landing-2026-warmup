@@ -8,28 +8,13 @@
   width: 100%;
   z-index: 1000;
   background-color: #fff;
-  height: v.$header-height;
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 37px;
-    padding-bottom: 23px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     gap: 10px;
-    position: relative;
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 96%;
-      height: v.$divider-width;
-      bottom: -4px;
-      left: 2%;
-      background-color: v.$divider-color;
-      @include m.respond-min(997px) {
-        bottom: 4px;
-      }
-    }
   }
   &__container-actions {
     position: absolute;
@@ -85,12 +70,6 @@
       flex-direction: row;
       gap: 40px;
     }
-  }
-
-  &__nav-item {
-  }
-
-  &__nav-link {
   }
 
   &__actions {

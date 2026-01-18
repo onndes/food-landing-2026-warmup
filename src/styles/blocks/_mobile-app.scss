@@ -3,15 +3,13 @@
 
 .mobile-app {
   &__container {
-    padding-top: 67px;
-    padding-bottom: 67px;
     display: grid;
     grid-template-columns: 1;
     justify-content: center;
-
     @include m.respond-min(v.$bp-tablet-portrait) {
       grid-template-columns: 1fr 1fr;
     }
+    // @include m.divider;
   }
 
   &__content {
@@ -81,7 +79,8 @@
       height: 101px;
       bottom: -82px;
       left: -46px;
-      background: url('../../assets/images/decor/mobile-app-arrow.svg') center center / contain no-repeat;
+      background: url('../../assets/images/decor/mobile-app-arrow.svg') center
+        center / contain no-repeat;
 
       @include m.respond-min(v.$bp-tablet-portrait) {
         transform: rotate(-110deg);
@@ -91,7 +90,8 @@
     }
   }
 
-  &__button {}
+  &__button {
+  }
 
   &__img-wrap {
     display: block;
@@ -114,7 +114,8 @@
       top: -6%;
       right: 19%;
       transform: rotate(195deg);
-      background: url('../../assets/images/decor/hero-lines-bottom-l.svg') center center / contain no-repeat;
+      background: url('../../assets/images/decor/hero-lines-bottom-l.svg')
+        center center / contain no-repeat;
 
       @include m.respond-min(v.$bp-tablet-portrait) {
         top: -5%;

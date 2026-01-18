@@ -2,15 +2,13 @@
 @use '../mixins.scss' as m;
 
 .restaurants {
-  &__container {
-    padding-top: 64px;
-    padding-bottom: 64px;
+  &__container-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
     max-width: 385px;
-
+    margin: 0 auto;
     @include m.respond-min(v.$bp-tablet) {
       max-width: 1250px;
     }
@@ -21,8 +19,6 @@
     font-weight: 600;
     font-size: 30px;
   }
-
-
 
   &__list {
     display: flex;
@@ -43,26 +39,23 @@
     align-self: end;
   }
 
-  &__view-all-link {}
+  &__view-all-link {
+  }
 
-  &__view-all-arrow {}
+  &__view-all-arrow {
+  }
 }
-
 
 .restaurant-card {
   background-color: v.$bg-stats;
   border-radius: 24px;
-  border: 1.00px solid v.$bg-main;
-
+  border: 1px solid v.$bg-main;
   box-shadow: 5px 57px 28px 0 rgba(229, 229, 229, 0.7);
   background: #fff;
   position: relative;
   width: 100%;
 
   @include m.respond-min(v.$bp-tablet) {
-    // min-width: 280px;
-    // flex-shrink: 1;
-    // max-width: 390px;
     flex: 1;
   }
 
@@ -72,8 +65,8 @@
     position: absolute;
     width: 100%;
     height: 58%;
-    border-radius: 24px 24px 0 0;
     background: #323142;
+    border-radius: 24px 24px 0 0;
     opacity: 0.05;
   }
 
@@ -81,22 +74,23 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
-        rgba(255, 255, 255, 0.85) 0%,
-        rgba(255, 255, 255, 0.4) 25%,
-        rgba(255, 255, 255, 0) 60%);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.4) 25%,
+      rgba(255, 255, 255, 0) 60%
+    );
     pointer-events: none;
     border-radius: 24px 24px 0 0;
     opacity: 0.4;
-
   }
 
   &__image-wrap {
     height: 140px;
-
     width: auto;
     background-color: v.$bg-main;
     min-height: 120px;
+    border-radius: 24px 24px 0 0;
   }
 
   &__image {
@@ -106,7 +100,6 @@
     object-fit: cover;
     overflow: hidden;
     border-radius: 24px 24px 0 0;
-
   }
 
   &__body {
@@ -133,12 +126,11 @@
       color: #fb471d;
       background: #f7c5ba;
     }
-
+    &--green {
+      color: #309d5b;
+      background: #33ac64;
+    }
   }
-
-
-
-  &__info {}
 
   &__name {
     font-weight: 600;
@@ -146,9 +138,7 @@
     line-height: 162%;
     color: v.$text-secondary;
     max-width: 170px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @include m.ellipsis;
   }
 
   &__meta {
@@ -157,14 +147,6 @@
     line-height: 162%;
     color: v.$text-main-light;
   }
-
-  &__time {}
-
-  &__separator {}
-
-  &__star {}
-
-  &__rating {}
 
   &__bookmark {
     @include m.button-reset;
@@ -180,8 +162,4 @@
     align-items: center;
     justify-content: center;
   }
-
-  &__bookmark-icon {}
-
-
 }
