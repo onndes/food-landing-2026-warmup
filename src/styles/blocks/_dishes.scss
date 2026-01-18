@@ -1,0 +1,117 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.dishes {
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__cards-list {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(146px, 224px));
+    gap: 20px;
+    justify-content: center;
+    @include m.respond-min(v.$bp-tablet) {
+      grid-template-columns: repeat(5, minmax(146px, 224px));
+    }
+
+  }
+
+  &__card {
+    &:nth-child(n + 5) {
+      display: none;
+    }
+    @include m.respond-min(v.$bp-tablet) {
+      &:nth-child(n + 5) {
+        display: block;
+      }
+    }
+  }
+
+  &__view-all {
+    text-align: right;
+  }
+
+  &__view-all-link {
+  }
+
+  &__view-all-arrow {
+  }
+}
+
+.dishes-card {
+  &__image-wrap {
+    position: relative;
+    transform: scale(0.9);
+    padding-top: 10px;
+  }
+  &__image {
+  }
+
+  &__button-heart {
+    @include m.button-reset;
+    position: absolute;
+    padding: 8px;
+    top: 0px;
+    right: 0px;
+    // width: ;
+    // background: rgba(255, 255, 255, 0.7);
+  }
+
+  &__body {
+  }
+
+  &__label {
+  }
+
+  &__label--yellow {
+  }
+
+  &__name {
+  }
+
+  &__meta {
+    padding-bottom: 8px;
+  }
+
+  &__time {
+  }
+
+  &__separator {
+  }
+
+  &__star {
+  }
+
+  &__rating {
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 10px;
+    align-items: center;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 22px;
+    color: v.$text-secondary;
+    span {
+      color: v.$text-main-light;
+      font-size: 15px;
+    }
+  }
+  &__button-add {
+    @include m.button-reset;
+    padding: 10px 20px;
+    background: #323142;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+  }
+}
