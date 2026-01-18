@@ -79,23 +79,6 @@
     margin-bottom: 33px;
   }
 
-  &__button {
-    padding: 14px 24px;
-    border-radius: 12px;
-    border: 1px solid transparent;
-    @include m.respond-min(768px) {
-      padding: 18px 30px;
-    }
-    &--primary {
-      color: #fff;
-      background-color: v.$accent;
-    }
-    &--secondary {
-      color: v.$accent;
-      border: 1px solid v.$accent;
-    }
-  }
-
   &__trastpilot {
     display: flex;
     align-items: center;

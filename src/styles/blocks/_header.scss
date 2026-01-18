@@ -89,20 +89,16 @@
   }
 
   &__action-button {
-    @include m.button-reset;
   }
 
   &__action-button--login {
+    @include m.button-reset;
     font-weight: 600;
   }
 
   &__action-button--signup {
-    background-color: v.$accent;
-    padding: 18px 27px;
     font-weight: 700;
-    border-radius: v.$radius;
     letter-spacing: v.$letter-spacing;
-    color: #fff;
   }
 
   &__burger {

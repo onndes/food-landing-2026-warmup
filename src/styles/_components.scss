@@ -87,6 +87,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  color: white;
 
   @include m.respond-min(768px) {
     padding: 18px 30px;
@@ -95,9 +96,18 @@
   &--primary {
     color: #fff;
     background-color: v.$accent;
+    transition: 0.4s all ease;
+    // fill: white;
+
+    &:hover {
+      // fill: red;
+      color: v.$accent;
+      border: 1px solid v.$accent;
+      background-color: transparent;
+    }
   }
 
-  --secondary {
+  &--secondary {
     color: v.$accent;
     border: 1px solid v.$accent;
   }
@@ -165,7 +175,7 @@
     }
     &--green {
       color: #309d5b;
-      background: #33ac64;
+      background: #33ac6426;
     }
   }
 }

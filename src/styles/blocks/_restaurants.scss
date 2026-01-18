@@ -54,6 +54,10 @@
   background: #fff;
   position: relative;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 
   @include m.respond-min(v.$bp-tablet) {
     flex: 1;
