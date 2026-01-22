@@ -63,8 +63,6 @@
     padding: 8px;
     top: 0px;
     right: 0px;
-    // width: ;
-    // background: rgba(255, 255, 255, 0.7);
   }
 
   &__body {
@@ -115,8 +113,8 @@
   &__button-add {
     @include m.button-reset;
     padding: 6px 20px;
-    background: #323142dc;
-    color: white;
+    background: v.$bg-9;
+    color: v.$bg-white;
     font-weight: 700;
     border-radius: 6px;
   }

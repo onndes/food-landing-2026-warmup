@@ -1,25 +1,66 @@
-$bg-main: #f9f9f9;
-$divider-color: #d1cfcf;
-$divider-color-2: #d1cfcf4b;
+/**
+ * COLOR VARIABLES NOTE
+ *
+ * This project is not a production product.
+ * It is a personal practice project aimed at restoring muscle memory
+ * and getting back into web development after a long break.
+ *
+ * The original Figma file contains a large number of similar color shades
+ * without a clear color system or semantic naming.
+ *
+ * For this reason, color variables are intentionally kept in a simplified
+ * and sometimes non-semantic form. Time-consuming color normalization
+ * and precise palette tuning are out of scope for this project and are
+ * not part of the learning goals.
+ *
+ * The focus here is on layout, structure, CSS architecture, and component
+ * implementation rather than design system accuracy.
+ */
+
 $accent: #6c5fbc;
-$title-color: #201f1f;
-$text-main: #606060;
-$text-main-light: #676767;
-$text-accent: #5c4eae;
-$text-accent-light: #6155ae;
-$black: rgba(32, 31, 31, 0.2);
+$bg-1: #f4f0ff;
+$bg-2: #6b5fbc4f;
+$bg-4: #fbac183d;
+$bg-5: #fbad18;
+$bg-6: #fafafa;
+$bg-7: #f9fafb;
+$bg-8: #e0e0e052;
+$bg-9: #323142dc;
+$bg-10: #dbd9ee;
+$bg-main: #f9f9f9;
 $bg-stats: #201f1f;
-$text-secondary: #323142;
-
-$radius: 18px;
-$letter-spacing: 0.55px;
-$header-height: 106px;
-
+$bg-white: #ffffff;
+$black: rgba(32, 31, 31, 0.2);
+$border-1: #edf2f7;
+$border-2: #f4f4f6;
+$bp-desktop: 1440px;
 $bp-mobile: 0;
 $bp-tablet-portrait: 768px;
 $bp-tablet: 1024px;
-$bp-desktop: 1440px;
+$divider-color-2: #d1cfcf4b;
+$divider-color: #d1cfcf;
 $divider-width: 1px;
-
-$padding-horizontal-mobile: 25px;
+$header-height: 106px;
+$letter-spacing: 0.55px;
 $padding-horizontal-desktop: 30px;
+$padding-horizontal-mobile: 25px;
+$radius: 18px;
+$shadow-1: rgba(0, 0, 0, 0.1);
+$shadow-2: rgba(229, 229, 229, 0.7);
+$text-1: #1a202c;
+$text-2: #4a5568;
+$text-3: #718096;
+$text-4: #a0aec0;
+$text-accent-light: #6155ae;
+$text-accent: #5c4eae;
+$text-main-light: #676767;
+$text-main: #606060;
+$text-secondary: #323142;
+$title-color: #201f1f;
+
+$text-yellow: #daa31a;
+$text-red: #fb471d;
+$text-green: #309d5b;
+$bg-yellow-light: #f7edd0;
+$bg-red-light: #f7c5ba;
+$bg-green-light: #33ac64;

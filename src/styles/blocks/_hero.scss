@@ -167,8 +167,6 @@
     height: 17%;
     max-height: 95px;
     width: 75%;
-    // max-width: 60%;
-    // min-width: 157px;
     background: #fff;
     z-index: 3;
     top: -13%;
@@ -176,19 +174,12 @@
     display: flex;
     gap: 9px;
     padding: 7px 4px;
-    box-shadow: -5px 6px 10px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: -5px 6px 10px 0 v.$shadow-1;
     container-type: inline-size;
 
-    // @include m.respond-max(408px) {
-    //   max-width: 50;
-    // }
-    @include m.respond-min(612px) {
-      // top: -11%;
-    }
     @include m.respond-min(v.$bp-tablet-portrait) {
       top: -10.5%;
       padding: 8px 7px;
-      // max-width: 60%;
       width: 70%;
     }
     @include m.respond-min(v.$bp-tablet) {
@@ -247,11 +238,11 @@
   &__graphic {
     position: absolute;
     z-index: 3;
-    background-color: white;
+    background-color: v.$bg-white;
     width: 37%;
     height: 37%;
     border-radius: v.$radius;
-    box-shadow: 6px -8px 13px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 6px -8px 13px 0 v.$shadow-1;
     bottom: 1%;
     left: 6%;
     display: flex;

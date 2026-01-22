@@ -50,7 +50,7 @@
   background-color: v.$bg-stats;
   border-radius: 24px;
   border: 1px solid v.$bg-main;
-  box-shadow: 5px 57px 28px 0 rgba(229, 229, 229, 0.7);
+  box-shadow: 5px 57px 28px 0 v.$shadow-2;
   background: #fff;
   position: relative;
   width: 100%;
@@ -122,17 +122,17 @@
     border-radius: 4px;
 
     &--yellow {
-      color: #daa31a;
-      background: #f7edd0;
+      color: v.$text-yellow;
+      background: v.$bg-yellow-light;
     }
 
     &--red {
-      color: #fb471d;
-      background: #f7c5ba;
+      color: v.$text-red;
+      background: v.$bg-red-light;
     }
     &--green {
-      color: #309d5b;
-      background: #33ac64;
+      color: v.$text-green;
+      background: v.$bg-green-light;
     }
   }
 
@@ -160,8 +160,8 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #dbd9ee;
-    border: 1px solid #f4f4f6;
+    background: v.$bg-10;
+    border: 1px solid v.$border-2;
     display: flex;
     align-items: center;
     justify-content: center;

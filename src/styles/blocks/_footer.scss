@@ -1,12 +1,7 @@
 @use '../variables.scss' as v;
 
 .site-footer {
-  // margin-top: 120px;
   padding: 30px 0;
-
-  // background: linear-gradient(to top, rgba(20, 20, 30, 0.9), rgba(20, 20, 30, 0.4));
-
-  // border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-inner {
@@ -16,5 +11,4 @@
 
   text-align: center;
   font-size: 0.85rem;
-  // color: v.$text-muted;
 }

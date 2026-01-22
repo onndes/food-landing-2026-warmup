@@ -9,7 +9,6 @@
     @include m.respond-min(v.$bp-tablet-portrait) {
       grid-template-columns: 1fr 1fr;
     }
-    // @include m.divider;
   }
 
   &__content {
