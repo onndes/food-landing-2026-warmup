@@ -2,90 +2,112 @@
 @use '../mixins' as m;
 
 .comments {
-  &__title {
+  --container: #{v.$container-max-width};
+  --card-basis: 40%;
+  --card-padding: 30px;
+  --track-padding-left: calc(max(0px, (100vw - var(--container)) / 2));
+  --padding-horizontal-mobile: #{v.$padding-horizontal-mobile};
+  --padding-horizontal-desktop: #{v.$padding-horizontal-desktop};
+  --padding-bottom-slider-desktop: 60px;
+
+  &__container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-top: 60px;
     padding-bottom: 60px;
+    @include m.respond-min(1024px) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  &__title {
+    padding-bottom: 20px;
+    text-align: center;
+    max-width: 100%;
   }
 
   &__slider {
     position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    padding-bottom: var(--padding-bottom-slider-desktop);
+
+    @include m.respond-min(v.$bp-tablet) {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
   }
 
   &__track {
-    padding-bottom: 60px;
+    display: flex;
+    transition: transform 0.4s ease;
+
     @include m.respond-min(v.$bp-tablet) {
-      padding-bottom: 0;
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
+      padding-left: var(--track-padding-left);
+      align-items: stretch;
     }
   }
 
-  &__progress {
-    content: '';
-    display: block;
+  &__progress-line {
     position: absolute;
     z-index: 1;
     height: 5px;
-    width: 98%;
-    max-width: 600px;
-    right: 50%;
-    transform: translateX(50%);
+    width: calc(100% - 3 * var(--card-padding));
+    left: calc(var(--card-padding) * 1.5);
+    background-color: #6b5fbc40;
+    bottom: 30px;
+    border-radius: 6px;
     @include m.respond-min(v.$bp-tablet) {
-      width: 53.6%;
-      right: 0px;
-      max-width: none;
-      transform: none;
-      bottom: 0px;
+      // left side and width are set dynamically in JS
+      bottom: calc(var(--padding-bottom-slider-desktop) + var(--card-padding));
     }
   }
-  &__progress-line {
+  &__progress-fill {
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100%;
+    background-color: #6c5fbc;
     border-radius: 6px;
-    background-color: #6b5fbc40;
-    height: 5px;
-    width: 100%;
-    // margin: 0 auto;
-    position: relative;
-    @include m.respond-min(v.$bp-tablet) {
-      //   max-width: 100%;
-      //   margin: none;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30%;
-      height: 100%;
-      background-color: #6c5fbc;
-      border-radius: 6px;
-    }
   }
 }
 
-// ----CARD----
+// ------------------------------------
+// ---- WRAP ----
+// ------------------------------------
+.comments-card-wrap {
+  flex: 0 0 100%;
+  padding: var(--card-padding);
+  @include m.respond-min(v.$bp-tablet) {
+    flex: 0 0 var(--card-basis);
+    padding: var(--card-padding);
+  }
+}
+
+// ------------------------------------
+// ---- CARD ----
+// ------------------------------------
 .comments-card {
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  padding: 25px;
   transition:
     transform 0.4s ease,
     opacity 0.4s ease;
-  opacity: 0.6;
-  max-width: 600px;
-  margin: 0 auto;
 
-  display: none;
+  align-items: center;
   @include m.respond-min(v.$bp-tablet) {
-    display: block;
     max-width: none;
-    flex: 0 0 43%;
   }
   &--active {
     opacity: 1;
-    display: block;
     @include m.respond-min(v.$bp-tablet) {
       display: block;
     }
+  }
+  &:not(&--active) {
+    opacity: 0.6;
   }
   &_header {
     height: 1px;

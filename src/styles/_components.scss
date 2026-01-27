@@ -2,7 +2,7 @@
 @use 'mixins' as m;
 
 .container {
-  max-width: 1280px;
+  max-width: v.$container-max-width;
   margin: 0 auto;
   padding: 60px v.$padding-horizontal-mobile;
 
