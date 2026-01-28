@@ -42,7 +42,9 @@
   &__track {
     display: flex;
     transition: transform 0.4s ease;
-
+    touch-action: pan-y;
+    cursor: grab;
+    user-select: none;
     @include m.respond-min(v.$bp-tablet) {
       padding-left: var(--track-padding-left);
       align-items: stretch;
@@ -51,7 +53,7 @@
 
   &__progress-line {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     height: 5px;
     width: calc(100% - 3 * var(--card-padding));
     left: calc(var(--card-padding) * 1.5);
@@ -64,9 +66,10 @@
     }
   }
   &__progress-fill {
+    transition: width 0.2s ease;
     top: 0;
     left: 0;
-    width: 33.33%;
+    // width set dynamically in JS
     height: 100%;
     background-color: #6c5fbc;
     border-radius: 6px;
@@ -79,6 +82,8 @@
 .comments-card-wrap {
   flex: 0 0 100%;
   padding: var(--card-padding);
+  position: relative;
+  z-index: 99;
   @include m.respond-min(v.$bp-tablet) {
     flex: 0 0 var(--card-basis);
     padding: var(--card-padding);
