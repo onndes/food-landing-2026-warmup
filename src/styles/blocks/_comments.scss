@@ -17,7 +17,7 @@
     padding-bottom: 60px;
     @include m.respond-min(1024px) {
       padding-top: 80px;
-      padding-bottom: 80px;
+      padding-bottom: 0px;
     }
   }
   &__title {
@@ -36,6 +36,7 @@
       width: 100vw;
       margin-left: calc(50% - 50vw);
       margin-right: calc(50% - 50vw);
+      padding-bottom: var(--padding-bottom-slider-desktop);
     }
   }
 
@@ -192,4 +193,12 @@
     height: 100%;
     object-fit: contain;
   }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }

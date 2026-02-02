@@ -3,6 +3,10 @@
 
 .dishes {
   &__container {
+    max-width: 521px;
+    @include m.respond-min(v.$bp-tablet) {
+      max-width: v.$container-max-width;
+    }
   }
 
   &__title {
