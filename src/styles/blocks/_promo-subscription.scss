@@ -3,7 +3,7 @@
 
 .promo-subscription {
   position: relative;
-  padding-bottom: 140px;
+  padding-bottom: 20px;
   @include m.respond-min(v.$bp-tablet) {
     padding-bottom: 0;
   }
